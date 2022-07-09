@@ -1,0 +1,7 @@
+/.vscode
+
+/Debug
+
+game.vcxproj
+game.vcxproj.filters
+game.vcxproj.user
