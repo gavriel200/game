@@ -6,15 +6,15 @@
 class Level : public State
 {
 private:
-	Player* player;
+	Player *player;
 
 	void handelPlayerInput();
 
 public:
-	Level(sf::RenderWindow* window, State::StateId& nextStateId);
+	Level(sf::RenderWindow *window, State::StateId &nextStateId);
 	~Level();
 
 	void handelEvents();
-	void update(const float& dt);
+	void update(const float &dt);
 	void render();
 };

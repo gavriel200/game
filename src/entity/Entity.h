@@ -2,21 +2,18 @@
 
 #include <SFML/Graphics.hpp>
 
+#include "component/MovementComponent.h"
+
 class Entity
 {
 protected:
-	sf::RectangleShape shape;
-	sf::Vector2f movementDir;
+	sf::Sprite sprite;
 
-	float speed = 500.f;
+	MovementComponent *movementComponent;
 
 public:
 	Entity();
 
 	virtual void update(const float &dt) = 0;
 	virtual void render(sf::RenderTarget &target) = 0;
-
-	void updateMovementDir(float x, float y);
-	void resetMovementDir();
-	void move(const float &dt);
 };
